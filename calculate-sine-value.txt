@@ -1,0 +1,18 @@
+int main()
+{
+    /* defining temprory variables */
+    double sineValue;
+    double number;
+    
+    /* getting number from the user */
+    printf(" Please Enter the number to be converted to sine value :  ");
+    scanf("%lf", &number);
+    
+    /* calculating the sine of the number */
+    sineValue = sin(number);
+    
+    /* Displaying the result of the calculation */
+    printf("\n The Sine value of %lf is %f ", number, sineValue);
+  
+    return 0;
+}

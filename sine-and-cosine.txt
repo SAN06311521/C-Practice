@@ -1,0 +1,28 @@
+/* C program to print the value for sine and cosine */
+#include<stdio.h>
+#include<conio.h>
+#include<math.h> /* using fabs , cosine and sine functions */
+# define PI 3.14159
+void displayTable()
+{
+    /*  Decleration of variables */
+    float r;
+    int i;
+    
+    /* Printing values for table */
+    printf("\nAngle \t Sine \t \t Cosine \n");
+    printf("- - - - - - - - - - - - - - - - - -");
+    
+    /*Using for loop for printing table of sine and cosine */
+    for(i = 0 ; i <= 180 ; i = i + 30)
+    {
+        r = i * PI / 180;
+        printf("\n %d \t %f \t %f \n", i, fabs(sin(r)), fabs(cos(r)));
+    }
+    printf("- - - - - - - - - - - - - - - - - -");
+    }
+void main()
+{
+    displayTable();
+    getch();
+}
