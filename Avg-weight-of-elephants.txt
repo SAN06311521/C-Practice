@@ -1,0 +1,30 @@
+/* Computing the average weight of the elephant seals by reading the weight in an array. */
+#include <stdio.h>
+int main() {
+    /* declaring the variables */
+    int n, i;
+    float num[100], sum = 0.0, avg;
+    
+    /*getting the number of elephant seals whose average weight is to be calculated */
+    printf("Enter the number of elephant seals whose average weight is to be calculated: ");
+    scanf("%d", &n);
+    
+    /* checking the corner case by reminding the limit */
+    while (n > 100 || n < 1) {
+        printf("Sorry! Please input a number in range of (1 to 100).\n");
+        printf(" Please enter the number of elephant seals again: ");
+        scanf("%d", &n);
+    }
+    
+    /* Getting the weights of elephant seals and calculating the sum */
+    for (i = 0; i < n; i++) {
+        printf("%d. Enter the weight of elephant seals: ", i + 1);
+        scanf("%f", &num[i]);
+        sum = sum + num[i];
+    }
+    
+    /* calculating the average and printing the final result */
+    avg = sum / n;
+    printf("Average of the weights of elephant seals entered is %f", avg);
+    return 0;
+}
